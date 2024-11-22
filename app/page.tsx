@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Hello World</h1>
-        <SweepingWoman />
+        {/* <SweepingWoman /> */}
       </main>
     </div>
   );
