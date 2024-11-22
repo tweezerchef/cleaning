@@ -1,5 +1,4 @@
-import { Stack, Typography, Button } from "@mui/material";
-import Grid from "@mui/material/Grid2";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import styles from "./css/Header.module.css";
 export function Header() {
@@ -7,13 +6,15 @@ export function Header() {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Image src="/sweep1.svg" alt="logo" width={100} height={100} />
-        <Typography variant="h4">Naiomi Cleans</Typography>
+        <h1 className={styles.title}>Naiomi Cleans</h1>
       </div>
-      <div className={styles.button}>
-        <Button variant="contained">Call Now</Button>
+      <div className={styles.middle}>
+        <Button variant="default" color="error" className={styles.button}>
+          Call Now
+        </Button>
       </div>
       <div className={styles.menu}>
-        <Typography>Test</Typography>
+        <h1 className={styles.menuItem}>Test</h1>
       </div>
     </div>
   );

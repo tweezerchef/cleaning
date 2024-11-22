@@ -12,18 +12,38 @@
 }
 
 .logo {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  height: 100px
+  justify-content: flex-start;
+  height: 100px;
 }
 
 .menu {
+  flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   height: 100px;
+  padding-right: 1rem;
+}
+
+.middle {
+  flex: 1;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
 .button {
-  height: 100px;
+  border-radius: 100px;
+  padding: 0.90rem 2.5rem;
+  font-weight: 600;
+  background-color: #ff0000;
+  border: none;
+}
+
+.title {
+  color: black !important;
 }
