@@ -1,7 +1,16 @@
 .body {
   margin-top: 100px;
   width: 100%;
-  background-color: rgba(229, 226, 252, 1);
-  padding: 0 2rem;
-  box-sizing: border-box;
+  background-color: rgba(229, 226, 252, 0.5);
+  padding: 0;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
