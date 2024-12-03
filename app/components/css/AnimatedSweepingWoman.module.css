@@ -1,0 +1,23 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 210px;
+  }
+
+  .svg {
+    position: absolute;
+    width: 196.76px;
+    height: 210px;
+    animation: sweep 10s linear infinite;
+  }
+
+  @keyframes sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+

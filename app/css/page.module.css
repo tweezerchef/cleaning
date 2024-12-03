@@ -1,0 +1,23 @@
+.page {
+  position: relative;
+  align-items: center;
+  justify-items: center;
+  min-height: 100svh;
+
+}
+
+.halfCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  border-radius: 0 0 400px 0;
+  background-color: #4834d4; /* Adjust the color to match your design */
+  z-index: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}
