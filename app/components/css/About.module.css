@@ -162,42 +162,11 @@
   }
 
   .textBox4 {
-    margin-top: -20px;  /* Pull up to reduce gap with elements above */
+    margin-top: -30px;  /* Pull up to reduce gap with elements above */
   }
 
   .imageContainer {
     align-self: center;
     margin-top: -20px;  /* Pull up slightly */
-  }
-}
-
-.sweepAnimation {
-  position: absolute;
-  width: 180px;
-  right: -200px; /* Start position off-screen to the right */
-  opacity: 0;
-  transform: translateY(100px) rotate(-15deg); /* Negative rotation for right side */
-  transition: all 0.8s ease-out;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.sweepAnimation.visible {
-  opacity: 1;
-  right: 15%; /* Move towards center from the right */
-  transform: translateY(0) rotate(-15deg);
-}
-
-/* Adjust position for different screen sizes */
-@media (max-width: 1024px) {
-  .sweepAnimation.visible {
-    right: 10%;
-  }
-}
-
-@media (max-width: 768px) {
-  .sweepAnimation.visible {
-    right: 5%;
-    width: 140px;
   }
 }

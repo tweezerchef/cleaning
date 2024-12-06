@@ -1,6 +1,5 @@
 import styles from "./css/About.module.css";
 import Image from "next/image";
-import { AnimatedSweep } from "./AnimatedSweep";
 
 export function About() {
   return (
@@ -39,8 +38,6 @@ export function About() {
           attention it deserves.
         </p>
       </div>
-
-      <AnimatedSweep />
 
       <div className={styles.textBox4}>
         <p>
