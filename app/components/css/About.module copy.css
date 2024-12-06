@@ -174,17 +174,17 @@
 .sweepAnimation {
   position: absolute;
   width: 180px;
-  right: -200px; /* Start position off-screen to the right */
+  right: -100px; /* Start position off-screen */
   opacity: 0;
-  transform: translateY(100px) rotate(-15deg); /* Negative rotation for right side */
+  transform: translateY(100px) rotate(-15deg);
   transition: all 0.8s ease-out;
   z-index: 1;
-  pointer-events: none;
+  pointer-events: none; /* Prevents the svg from interfering with interactions */
 }
 
 .sweepAnimation.visible {
   opacity: 1;
-  right: 15%; /* Move towards center from the right */
+  right: 15%; /* Move towards center */
   transform: translateY(0) rotate(-15deg);
 }
 

@@ -40,10 +40,13 @@
 .button {
   white-space: nowrap;
   border-radius: 100px;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  background-color: #ff0000;
-  border-color: #ff0000;
+  padding: 0.85rem 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #ff4b4b, #ff0000);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .menu {
   flex: 1;

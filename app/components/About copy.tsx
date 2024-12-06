@@ -1,8 +1,35 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
 import styles from "./css/About.module.css";
 import Image from "next/image";
-import { AnimatedSweep } from "./AnimatedSweep";
 
 export function About() {
+  const [isSweepVisible, setSweepVisible] = useState(false);
+  const sweepRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setSweepVisible(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3, // Trigger when 30% of the element is visible
+      }
+    );
+
+    if (sweepRef.current) {
+      observer.observe(sweepRef.current);
+    }
+
+    return () => {
+      if (sweepRef.current) {
+        observer.unobserve(sweepRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.textBox1}>
@@ -40,7 +67,16 @@ export function About() {
         </p>
       </div>
 
-      <AnimatedSweep />
+      <Image
+        src="/sweep2.svg"
+        width={180}
+        height={180}
+        alt="Decorative sweeping brush"
+        className={`${styles.sweepAnimation} ${
+          isSweepVisible ? styles.visible : ""
+        }`}
+        ref={sweepRef}
+      />
 
       <div className={styles.textBox4}>
         <p>
