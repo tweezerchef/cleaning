@@ -17,8 +17,8 @@ const AboutDivider = () => {
             key={index}
             src={sweepPatterns[index % 4]} // This will cycle through the 4 patterns
             alt="decorative cleaning icon"
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             className={styles.icon}
           />
         ))}

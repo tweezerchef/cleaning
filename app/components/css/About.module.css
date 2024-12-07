@@ -128,7 +128,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -143,8 +143,9 @@
 
   .textBox1, .textBox2, .textBox3, .textBox4 {
     padding: 1.2rem;
+    width: 100%;
+    max-width: 90%;
     transform: none;
-    width: 90%;
   }
 
   .imageContainer {
