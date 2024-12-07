@@ -9,6 +9,7 @@
   grid-template-areas:
     "text1 image text3"
     "text2 text4 text4";
+
 }
 
 /* Base styles for all text boxes */
@@ -107,7 +108,23 @@
       "text1 text3"
       "image text2"
       "text4 text4";
-    gap: 20px;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .textBox1, .textBox2, .textBox3, .textBox4 {
+    padding: 9px;
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
+  }
+  .textBox4 {
+    max-width: 90%;
+  }
+
+  .imageContainer {
+    width: 80%;
+    justify-self: center;
   }
 }
 
@@ -120,8 +137,8 @@
       "image"
       "text3"
       "text4";
-    gap: 15px;
-    padding: 0 15px;
+    gap: 10px;
+    padding: 0 1px;
   }
 
   .textBox1, .textBox2, .textBox3, .textBox4 {
