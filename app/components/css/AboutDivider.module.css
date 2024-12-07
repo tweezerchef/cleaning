@@ -3,14 +3,35 @@
     padding: 0.5rem 0;
     display: flex;
     justify-content: center;
+    position: relative;
   }
 
   .iconRow {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(229, 226, 252, 0.5);
+    padding: 0 1rem;
   }
 
+  .dividerContainer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(246, 165, 255, 0.7),
+      rgba(246, 165, 255, 0.7),
+      transparent
+    );
+    z-index: 1;
+  }
 
   @media (max-width: 768px) {
     .iconRow {
