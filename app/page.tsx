@@ -8,10 +8,12 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.halfCircle}></div>
       <main className={styles.main}>
+        <div className={styles.star}></div>
         <About />
-        <AboutDivider />
+
         <h2>Services</h2>
         <Services />
+        <AboutDivider />
         <MockSection />
       </main>
     </div>

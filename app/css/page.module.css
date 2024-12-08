@@ -8,6 +8,7 @@
   overflow-x: hidden;
   background-color: transparent;
   width: 100%;
+
   left: 0;
 }
 
@@ -21,8 +22,35 @@
   height: 400px;
   border-radius: 0 0 400px 0;
   background-color: #4834d4;
+  background:
+  radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 90%)
+  #4834d4;
   z-index: 0;
   transform: translateX(0);
+}
+/* HTML: <div class="star"></div> */
+.star {
+  position: absolute;
+  top: 400px;
+  right: -275px;
+  width: 600px;
+  z-index: -1;
+  aspect-ratio: 1;
+  background-color: #4834d4;
+  background:
+  radial-gradient(circle at 40% 30%,#0000 4%,57%,#000 90%)
+  #4834d4;
+
+  clip-path: polygon(
+    50% 0,
+    calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+    calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+    calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn)))
+   );
+  /* or more simple
+  clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%);
+   */
 }
 
 .main {
