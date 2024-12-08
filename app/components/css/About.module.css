@@ -14,14 +14,15 @@
 
 /* Base styles for all text boxes */
 .textBox1, .textBox2, .textBox3, .textBox4 {
-  background-color: rgba(246, 165, 255, 0.7);
+  background-color: rgba(244, 217, 245, 0.5);
   backdrop-filter: blur(8px);
   padding: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(137, 41, 114, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   opacity: 0;
   width: fit-content;
   justify-self: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .textBox1 {
@@ -189,4 +190,9 @@
     align-self: center;
     margin-top: -20px;  /* Pull up slightly */
   }
+}
+
+.textBox1:hover, .textBox2:hover, .textBox3:hover, .textBox4:hover {
+  transform: translateY(-3px) rotate(0deg) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }

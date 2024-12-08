@@ -12,10 +12,12 @@ export default function Home() {
         <div className={styles.star}></div>
         <About />
         <AboutDivider />
-        <h2>Services</h2>
+        <h1>Services</h1>
         <Services />
-
+        <AboutDivider />
+        <div className={styles.halfCircle2}></div>
         <Testimonial />
+
         <MockSection />
       </main>
     </div>

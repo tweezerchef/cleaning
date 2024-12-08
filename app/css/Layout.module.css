@@ -1,11 +1,15 @@
 .body {
   margin-top: 100px;
   width: 100%;
+  min-height: 100vh;
   background-color: rgba(229, 226, 252, 0.5);
   padding: 0;
   position: relative;
   margin-left: 0;
   margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
@@ -13,4 +17,6 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }

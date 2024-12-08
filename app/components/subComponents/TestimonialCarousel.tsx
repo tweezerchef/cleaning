@@ -1,5 +1,6 @@
 "use client";
 import { EmblaOptionsType } from "embla-carousel";
+import Image from "next/image";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
   PrevButton,
@@ -66,10 +67,20 @@ const TestimonialCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <div className={styles.embla__slide} key={index}>
               <Card className={styles.card}>
+                <div className={styles.avatar}>
+                  <Image
+                    src="/avatar.webp"
+                    alt="Avatar"
+                    width={100}
+                    height={100}
+                    className={styles.avatarImage}
+                    priority={index === 0}
+                  />
+                </div>
                 <CardContent className={styles.cardContent}>
                   <p className={styles.quote}>{testimonial.quote}</p>
                   <span className={styles.attribution}>
-                    {testimonial.author}
+                    - {testimonial.author}
                   </span>
                 </CardContent>
               </Card>
