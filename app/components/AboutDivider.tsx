@@ -1,15 +1,27 @@
 "use client";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import styles from "./css/AboutDivider.module.css";
+import { useRef } from "react";
 
 const AboutDivider = () => {
-  const { scrollYProgress } = useScroll();
-  const xPosition = useTransform(
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const xRange = useTransform(
     scrollYProgress,
-    [0, 0.5], // Input range (scroll progress)
-    ["-100%", "0%"] // Output range (x position)
+    [0, 0.3, 0.7, 1],
+    ["-600%", "-300%", "-150%", "0%"]
   );
+
+  const x = useSpring(xRange, {
+    stiffness: 50,
+    damping: 20,
+  });
 
   const sweepPatterns = [
     "/sweep1.svg",
@@ -19,8 +31,8 @@ const AboutDivider = () => {
   ];
 
   return (
-    <div className={styles.dividerContainer}>
-      <motion.div className={styles.iconRow} style={{ x: xPosition }}>
+    <div ref={ref} className={styles.dividerContainer}>
+      <motion.div className={styles.iconRow} style={{ x }}>
         {[...Array(12)].map((_, index) => (
           <Image
             key={index}

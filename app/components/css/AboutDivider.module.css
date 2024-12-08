@@ -1,15 +1,12 @@
 .dividerContainer {
     width: 100%;
     padding: 0.5rem 0;
-    display: flex;
-    justify-content: center;
     position: relative;
     overflow: hidden;
   }
 
   .iconRow {
     display: flex;
-    align-items: center;
     gap: 1rem;
     position: relative;
     z-index: 2;

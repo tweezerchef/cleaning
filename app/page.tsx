@@ -2,6 +2,7 @@ import styles from "./css/page.module.css";
 import { About } from "./components/About";
 import AboutDivider from "./components/AboutDivider";
 import { Services } from "./components/Services";
+import MockSection from "./components/MockSection";
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -11,6 +12,7 @@ export default function Home() {
         <AboutDivider />
         <h2>Services</h2>
         <Services />
+        <MockSection />
       </main>
     </div>
   );
