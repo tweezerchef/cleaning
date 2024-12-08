@@ -2,6 +2,7 @@ import styles from "./css/page.module.css";
 import { About } from "./components/About";
 import AboutDivider from "./components/AboutDivider";
 import { Services } from "./components/Services";
+import { Testimonial } from "./components/Testimonial";
 import MockSection from "./components/MockSection";
 export default function Home() {
   return (
@@ -10,10 +11,11 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.star}></div>
         <About />
-
+        <AboutDivider />
         <h2>Services</h2>
         <Services />
-        <AboutDivider />
+
+        <Testimonial />
         <MockSection />
       </main>
     </div>
