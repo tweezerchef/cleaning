@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Button2 from "./subComponents/Button";
 import Image from "next/image";
 import styles from "./css/Header.module.css";
 export function Header() {
@@ -12,6 +13,7 @@ export function Header() {
         <Button variant="default" color="error" className={styles.button}>
           Call Now
         </Button>
+        {/* <Button2 /> */}
       </div>
       <div className={styles.menu}>
         <h1 className={styles.menuItem}>Test</h1>
