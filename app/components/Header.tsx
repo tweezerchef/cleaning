@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Button2 from "./subComponents/Button";
 import Image from "next/image";
+import Hamburger from "./subComponents/Hamburger";
 import styles from "./css/Header.module.css";
+
 export function Header() {
   return (
     <div className={styles.container}>
@@ -16,7 +18,7 @@ export function Header() {
         {/* <Button2 /> */}
       </div>
       <div className={styles.menu}>
-        <h1 className={styles.menuItem}>Test</h1>
+        <Hamburger />
       </div>
     </div>
   );
